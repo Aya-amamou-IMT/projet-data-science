@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import missingno as msno
+from scipy.stats import pearsonr
+from scipy.stats import spearmanr
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score, mean_squared_error
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from sklearn.decomposition import PCA
+
+
+
+pollution = pd.read_csv('registre-francais-des-emission-polluantes-emissions.csv', sep = ";")
+pathologies = pd.read_csv('effectifs.csv', sep= ";")  
+
